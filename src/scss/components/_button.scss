@@ -1,7 +1,7 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 13px;
+  line-height: 1.3;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -11,26 +11,44 @@
   text-transform: uppercase;
   color: white;
   font-weight: 700;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
-  width: 100%;
-  min-height: 92px;
+  background: linear-gradient(94.85deg, #f71614 20.34%, #c80300 91.11%);
+  box-shadow: 0px 4px 0px #ab0300;
+  border-radius: 177px;
+  @include max-width(255px);
+  min-height: 60px;
   overflow: hidden;
   position: relative;
 
   @media (max-width: 650px) {
-    font-size: 16px;
+    font-size: 13px;
+  }
+
+  &_file {
+    padding-right: 79px;
+    padding-left: 28px;
+
+    &::before {
+      content: url('/src/img/icons/form/docs.svg');
+      position: absolute;
+      top: 10px;
+      right: 45px;
+    }
   }
 
   &:hover {
-    background: #fc4f19;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.35),
+        rgba(255, 255, 255, 0.35)
+      ),
+      linear-gradient(94.85deg, #f71614 20.34%, #c80300 91.11%);
   }
 
   &:active {
-    background: #cb3300;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(94.85deg, #f71614 20.34%, #c80300 91.11%);
     box-shadow: none;
-    top: 6px;
+    top: 4px;
   }
 
   &::after {
