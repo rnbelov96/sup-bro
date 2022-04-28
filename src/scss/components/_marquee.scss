@@ -1,7 +1,8 @@
 .marquee-wrapper {
-  width: 20px;
-  height: 100%;
-  position: relative;
+  width: 64px;
+  height: calc(100% - 40px);
+  top: 30px;
+  left: -170px;
   position: absolute;
   overflow: hidden;
 }
@@ -9,10 +10,10 @@
 .marquee {
   position: relative;
   overflow: hidden;
-  --move-initial: calc(0);
-  --move-final: calc(-255px);
-  width: 3774px;
-  left: -1876px;
+  --move-initial: calc(0px);
+  --move-final: calc(-810px);
+  width: 4598px;
+  left: -2279px;
   transform: rotate(270deg);
 }
 
@@ -25,9 +26,14 @@
 }
 
 .marquee span {
-  width: 255px;
+  width: 810px;
   flex-shrink: 0;
   padding: 0px;
+  font-size: 56px;
+  font-weight: 500;
+  color: #e5e5e5;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 @keyframes marquee {

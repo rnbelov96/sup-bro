@@ -47,6 +47,18 @@
     }
   }
 
+  &_prezent {
+    padding-right: 79px;
+    padding-left: 28px;
+
+    &::before {
+      content: url('/src/img/icons/form/prezent.svg');
+      position: absolute;
+      top: 14px;
+      right: 51px;
+    }
+  }
+
   &:hover {
     background: linear-gradient(
         0deg,

@@ -1,0 +1,315 @@
+.tour {
+  padding-top: 64px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+  }
+}
+
+.tour__title {
+  display: inline-block;
+  position: relative;
+  left: 40px;
+  font-size: 38px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 0;
+
+  br {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 650px) {
+    left: 0;
+  }
+
+  &::before {
+    content: '';
+    width: 261px;
+    height: 1px;
+    background-color: $blue;
+    left: -277px;
+    @include y-align;
+    position: absolute;
+  }
+}
+
+.tour__subtitle {
+  max-width: 920px;
+  @include h3;
+  font-size: 36px;
+  font-weight: 300;
+  color: $blue;
+  margin-bottom: 24px;
+  line-height: 1.15;
+
+  &::after {
+    z-index: -1;
+    content: url('/src/img/bgs/tour-top-bg.jpg');
+    position: absolute;
+    left: -1260px;
+    top: -570px;
+  }
+
+  @include mobile-mb;
+
+  @media (max-width: 650px) {
+    font-size: 20px !important;
+  }
+}
+
+.tour__text {
+  margin-bottom: 8px;
+  max-width: 920px;
+}
+
+.tour__list-title {
+  margin-bottom: 48px;
+  font-weight: 500;
+
+  @media (max-width: 650px) {
+    margin-bottom: 30px;
+  }
+}
+
+.tour__content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  @include mobile-mb;
+}
+
+.tour__left-side {
+  @include max-width(730px);
+}
+
+.tour__left-top-box {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  @include max-width(730px);
+  justify-content: center;
+}
+
+.tour__item {
+  display: flex;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -32px;
+    left: -26px;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 115%;
+    color: $blue;
+  }
+
+  &_first {
+    flex-direction: column;
+    @include max-width(255px);
+
+    &::before {
+      content: '01';
+    }
+
+    .tour__item-img {
+      @media (max-width: 650px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .tour__item-left-box {
+      min-height: 198px;
+
+      @media (max-width: 650px) {
+        min-height: 100px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      max-width: 300px;
+    }
+  }
+
+  &_second {
+    &::before {
+      content: '02';
+    }
+  }
+
+  &_third {
+    &::before {
+      content: '03';
+    }
+  }
+
+  &_second,
+  &_third {
+    @include max-width(445px);
+    min-height: 168px;
+
+    .tour__item-img {
+      @media (max-width: 650px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .tour__item-left-box {
+      min-height: 168px;
+
+      @media (max-width: 650px) {
+        min-height: 100px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+
+  &_fourth {
+    @include max-width(730px);
+    min-height: 168px;
+    margin-top: 30px;
+
+    &::before {
+      content: '04';
+    }
+
+    .tour__item-img {
+      @media (max-width: 650px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .tour__item-left-box {
+      min-height: 200px;
+
+      @media (max-width: 650px) {
+        min-height: 100px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.tour__item-left-box {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.tour__top-right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include max-width(445px);
+}
+
+.tour__item-title {
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: $blue;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.tour__item-subtitle {
+  margin-bottom: 0;
+}
+
+.tour__right-side {
+  max-width: 350px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 23px;
+  padding-left: 32px;
+
+  @media (max-width: 650px) {
+    max-width: 300px;
+  }
+}
+
+.tour__right-text {
+  margin-bottom: 23px;
+  b {
+    font-weight: 500;
+  }
+}
+
+.tour__right-img {
+  @media (max-width: 650px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.tour__text-list {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 73px;
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: url('/src/img/bgs/tour-bottom-bg.jpg');
+    position: absolute;
+    right: -550px;
+    top: -160px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+.tour__list-text-left,
+.tour__list-text-right {
+  flex: 1 1;
+}
+
+.tour__list-text-left {
+  margin-bottom: 0;
+  b {
+    font-weight: 500;
+  }
+}
+
+.tour__list-text-right {
+  font-size: 22px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $blue;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.tour__right-img {
+  position: relative;
+  @include x-align;
+}
