@@ -1,0 +1,50 @@
+.join {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  @include bg;
+  background-image: url('/src/img/bgs/join-bg.jpg');
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.join__content {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(48px);
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 19px;
+  max-width: 540px;
+
+  @media (max-width: 650px) {
+    padding: 20px;
+  }
+}
+
+.join__text {
+  margin-bottom: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.join__title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0;
+  text-underline-offset: 4px;
+
+  span {
+    text-decoration: underline;
+    color: $red;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 22px !important;
+  }
+}
