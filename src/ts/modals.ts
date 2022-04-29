@@ -5,8 +5,8 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'на бесплатную консультацию',
-    button: 'Получить консультацию',
+    title: 'Станьте частью команды Sup-Bro',
+    button: 'Оставить заявку',
   },
   {
     title: 'на презентацию франшизы и финансовую модель',
@@ -89,17 +89,7 @@ callbackBtnElList.forEach(btn => {
   });
 });
 
-const presentBtnElList = document.querySelectorAll('.js-present');
-presentBtnElList.forEach(btn => {
-  btn.addEventListener('click', () => {
-    openedModalList.unshift(formModalEl);
-    formTitleEl.textContent = modalFormInfoList[1].title;
-    formBtnEl.textContent = modalFormInfoList[1].button;
-    openModal(formModalEl as HTMLDivElement);
-  });
-});
-
-// Для каждого модального окна с видео прописать такой обработчик 
+// Для каждого модального окна с видео прописать такой обработчик
 const youtubeBtnCallEl = document.querySelector('.js-youtube');
 youtubeBtnCallEl?.addEventListener('click', () => {
   if (!isYoutubeModalOpened) {

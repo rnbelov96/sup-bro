@@ -5,6 +5,8 @@
 @import './base/global.scss';
 @import './components/modal.scss';
 @import './components/priv-policy.scss';
+@import './components/header.scss';
+@import './components/footer.scss';
 
 .thanks__html,
 .thanks__body {
@@ -12,7 +14,7 @@
 }
 
 .thanks__body {
-  // background-image: url('/src/img/bgs/some-image.jpg');
+  background-image: url('/src/img/bgs/thanks-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -44,4 +46,261 @@
 
 .thanks {
   flex: 1 0 auto;
+  overflow: hidden;
+  color: white;
+  padding-top: 16px;
+  padding-bottom: 22px;
+}
+
+.thanks__content {
+  max-width: 635px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 650px) {
+    @include max-width(100%);
+  }
+}
+
+.thanks__title {
+  @include h2;
+  font-weight: 300;
+  margin-bottom: 12px;
+  max-width: 760px;
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  span {
+    color: $yellow;
+  }
+}
+
+.thanks__text {
+  margin-bottom: 16px;
+}
+
+.thanks__time-head {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 85px;
+  padding-right: 43px;
+  background-color: $blue;
+  font-weight: 400;
+  margin-bottom: 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 35px;
+    @include y-align;
+    content: url('/src/img/icons/calendar.svg');
+  }
+
+  &::after {
+    position: absolute;
+    right: 43px;
+    @include y-align;
+    content: url('/src/img/icons/thanks-circles.svg');
+
+    @media (max-width: 650px) {
+      right: 13px;
+    }
+  }
+}
+
+.thanks__time-content {
+  background-color: white;
+  border: 2px solid #1d7585;
+  border-top: none;
+  padding-top: 9px;
+  padding-left: 35px;
+  padding-bottom: 9px;
+  padding-right: 30px;
+  color: black;
+}
+
+.thanks__time-box {
+  margin-bottom: 12px;
+}
+
+.thanks__time-dayly {
+  margin-bottom: 6px;
+}
+
+.thanks__time-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/icons/devider.png');
+    position: absolute;
+    right: 156px;
+    top: -26px;
+
+    @media (max-width: 650px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+}
+
+.thanks__time-text {
+  margin-bottom: 0;
+  font-weight: 500;
+
+  @media (max-width: 650px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.thanks__time-number {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.thanks__time-note {
+  margin-bottom: 12px;
+}
+
+.thanks__list-title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.thanks__list {
+  display: flex;
+  gap: 101px;
+  margin-bottom: 18px;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.thanks__item-text {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.thanks__item-cite-link {
+  width: 111px;
+  height: 40px;
+  display: block;
+  @include bg;
+  background-image: url('/src/img/icons/logo-link.png');
+}
+
+.thanks__stars-list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.thanks__stars {
+  width: 160px;
+  height: 35px;
+  background-image: url('/src/img/icons/stars.svg');
+}
+
+.thanks__stars-number {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.thanks__slider-title {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.thanks__owner-box {
+  position: absolute;
+  left: 660px;
+  top: 10px;
+
+  @media (max-width: 1200px) {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+.thanks__owner-img {
+  position: relative;
+  left: 100px;
+  top: 26px;
+
+  @media (max-width: 650px) {
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.thanks__owner-caption-box {
+  max-width: 350px;
+  padding-left: 40px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-right: 31px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(48px);
+  color: black;
+}
+
+.thanks__owner-name {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.15;
+
+  @media (max-width: 650px) {
+    font-size: 20px !important;
+  }
+}
+
+.thanks__owner-caption {
+  position: relative;
+  left: 65px;
+  margin-bottom: 0;
+}
+
+.thanks__slider-box {
+  position: relative;
+}
+
+.thanks__slider {
+  @include max-width(540px);
+}
+
+.thanks__slider-img {
+  @media (max-width: 650px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $blue;
 }

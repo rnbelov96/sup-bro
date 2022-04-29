@@ -16,6 +16,14 @@
   }
 }
 
+.footer__left-side {
+  @media (max-width: 650px) {
+    position: relative;
+    left: 4px;
+    max-width: 232px;
+  }
+}
+
 .footer__copyright,
 .footer__data {
   font-weight: 400;

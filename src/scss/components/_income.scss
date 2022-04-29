@@ -1,0 +1,54 @@
+.income {
+  @include bg;
+  background-color: #fdfcea;
+  background-image: url('/src/img/bgs/income-bg.jpg');
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.income__content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.income__left-side {
+  @include max-width(635px);
+}
+
+.income__title {
+  @include h1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+
+  span {
+    color: $red;
+  }
+}
+
+.income__subtitle {
+  @include h2;
+  margin-bottom: 16px;
+
+  span {
+    color: $red;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+
+    @media (max-width: 650px) {
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.income__text {
+  @include h3;
+  margin-bottom: 0;
+  font-weight: 500;
+}

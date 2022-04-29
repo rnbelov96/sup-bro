@@ -1,6 +1,23 @@
 .header {
   padding-top: 24px;
 
+  &_thanks {
+    background-color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .header__text {
+      color: black;
+    }
+    .header__phone {
+      @include reset-link(black);
+      color: black;
+    }
+    .header__callback {
+      color: black
+    }
+  }
+
   @media (max-width: 650px) {
     padding-top: 10px;
   }

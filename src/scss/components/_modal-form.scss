@@ -23,9 +23,13 @@
   font-size: 22px;
   line-height: 1.3;
   text-align: center;
-  width: 122%;
+  width: 131%;
   position: relative;
   @include x-align;
+
+  &_modal {
+    width: 120%;
+  }
 
   @media (max-width: 650px) {
     font-size: 20px;

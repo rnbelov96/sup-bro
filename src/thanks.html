@@ -4,28 +4,230 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cпасибо, Ваша заявка принята</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"
+      integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body class="thanks__body">
     <div class="thanks__wrapper">
       <header class="header header_thanks thanks__header">
-        <div class="container"></div>
+        <div class="container">
+          <div class="header__content">
+            <a href="index.html">
+              <img
+                src="./img/icons/logo-black.png"
+                alt="Логотип компании"
+                width="160"
+                height="70"
+                class="header__logo"
+              />
+            </a>
+            <p class="header__text">
+              Организация нового вида активного отдыха на sup-досках
+            </p>
+            <div class="header__contact-box">
+              <a href="tel:+79119570203" class="header__phone"
+                >+7 (911) 957-02-03</a
+              ><button class="header__callback js-callback">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
       </header>
 
       <section class="thanks">
         <div class="container thanks__container">
           <div class="thanks__main">
+            <h1 class="thanks__title">
+              <span class="thanks__user-name js-name"></span>, благодарим
+              вас за обращение в компанию <b>Sup-Bro©</b>
+            </h1>
             <div class="thanks__content">
-              <h1 class="thanks__title">
-                <span class="thanks__user-name js-name"></span>лагодарим Вас
-                за обращение в компанию
-              </h1>
+              <p class="thanks__text">
+                Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее
+                время.
+              </p>
+              <div class="thanks__time-box">
+                <p class="thanks__time-head">График работы:</p>
+                <div class="thanks__time-content">
+                  <p class="thanks__time-dayly">Ежедневно</p>
+                  <div class="thanks__time-row">
+                    <p class="thanks__time-text">
+                      По нашему местному времени <br />
+                      в г.Санкт-Петербург:
+                    </p>
+                    <p class="thanks__time-number">с 10:00 до 22:00</p>
+                  </div>
+                </div>
+              </div>
+              <p class="thanks__time-note">
+                Если Вы оставили заявку в нерабочее время или в
+                выходной/праздничный день — мы перезвоним Вам в ближайший
+                рабочий день.
+              </p>
+              <p class="thanks__list-title">
+                А пока ближе познакомьтесь с командой:
+              </p>
+              <div class="thanks__list">
+                <div class="thanks__item">
+                  <p class="thanks__item-text">Главный сайт бренда:</p>
+                  <a
+                    href="https://www.sup-bro.ru"
+                    target="_blank"
+                    class="thanks__item-cite-link"
+                  ></a>
+                </div>
+                <div class="thanks__item">
+                  <p class="thanks__item-text">Отзывы клиентов на Yandex:</p>
+                  <div class="thanks__stars-list">
+                    <div class="thanks__stars"></div>
+                    <p class="thanks__stars-number">4,3</p>
+                  </div>
+                </div>
+              </div>
+              <p class="thanks__slider-title">Еще больше отзывов:</p>
+              <div class="thanks__slider-box">
+                <div class="swiper thanks__slider">
+                  <div class="swiper-wrapper thanks__slider-wrapper">
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/1.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/2.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/3.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/1.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/2.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                    <div class="swiper-slide thanks__slide">
+                      <img
+                        src="./img/gallery/slider/3.jpg"
+                        alt="Отзыв"
+                        width="160"
+                        height="184"
+                        class="thanks__slider-img"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-button-next thanks__slider-btn thanks__slider-btn_next"
+                ></div>
+                <div
+                  class="swiper-button-prev thanks__slider-btn thanks__slider-btn_prev"
+                ></div>
+              </div>
+              <div class="thanks__owner-box">
+                <img
+                  src="./img/owner-thanks.png"
+                  alt="Основатель проекта Дмитрий Сурпуховитин"
+                  width="428"
+                  height="421"
+                  class="thanks__owner-img"
+                />
+                <div class="thanks__owner-caption-box">
+                  <p class="thanks__owner-name">
+                    Дмитрий <br />
+                    Серпуховитин
+                  </p>
+                  <p class="thanks__owner-caption">
+                    основатель и идеолог <br />
+                    проекта Sup-Bro
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <footer class="footer thanks__footer">
-        <div class="container"></div>
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__left-side">
+              <p class="footer__copyright">
+                © Sup-Bro, 2019-<span class="js-year"></span> г.
+              </p>
+              <div class="footer__data">
+                ИП Серпуховитин Дмитрий Александрович, <br />
+                ИНН 780528097791
+              </div>
+              <address class="footer__address">
+                г. Санкт-Петербург, Ленинградская <br />
+                область, Россия
+              </address>
+            </div>
+            <div class="footer__center">
+              <img
+                src="./img/icons/logo.png"
+                width="140"
+                alt="Логотип компании"
+                class="footer__logo"
+              /><button class="footer__policy js-policy">
+                Политика конфиденциальности
+              </button>
+            </div>
+            <div class="footer__right-side">
+              <div class="header__contact-box">
+                <a href="tel:+79119570203" class="header__phone"
+                  >+7 (911) 957-02-03</a
+                ><button class="header__callback js-callback">
+                  Заказать звонок
+                </button>
+              </div>
+              <a
+                href="https://франчайзинг5.рф"
+                target="_blank"
+                class="footer__f5"
+                >Упаковка и продвижение <br />
+                франшиз: «Франчайзинг5»</a
+              >
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
@@ -52,8 +254,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Название
-            Компании».
+            Оператор может получить о посетителях веб-сайта компании Sup-Bro (ИП Серпуховитин Дмитрий Александрович,
+            ИНН 780528097791).
           </li>
         </ol>
 
@@ -179,7 +381,7 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом email@mail.ru с пометкой «Отказ от
+            электронной почты с доменом serpuhovitin@gmail.com с пометкой «Отказ от
             уведомлений о новых продуктах и услугах и специальных предложениях».
           </li>
           <li class="priv-policy__item">
