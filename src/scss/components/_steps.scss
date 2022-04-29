@@ -4,6 +4,10 @@
   background-image: url('/src/img/bgs/steps-bg.jpg');
   background-size: auto;
   background-position-y: top;
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+  }
 }
 
 .steps__title {

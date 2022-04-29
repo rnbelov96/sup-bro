@@ -6,6 +6,18 @@
   position: relative;
   z-index: 2;
 
+  &_middle {
+    background-image: url('/src/img/bgs/format-bg.jpg');
+  }
+
+  &_bottom {
+    background-image: url('/src/img/bgs/join-bottom-bg.jpg');
+
+    .join__content {
+      margin-left: auto;
+    }
+  }
+
   @media (max-width: 650px) {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -42,9 +54,11 @@
   span {
     text-decoration: underline;
     color: $red;
+    text-transform: uppercase;
   }
 
   @media (max-width: 650px) {
     font-size: 22px !important;
+    text-underline-offset: 2px;
   }
 }
