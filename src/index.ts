@@ -1,6 +1,7 @@
 import './scss/style.scss';
 import './ts/dropdown';
 import './ts/modals';
+import './ts/year';
 // import './ts/slider';
 // import './ts/calc';
 import './ts/setup-forms';
