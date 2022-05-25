@@ -1,6 +1,9 @@
 /* eslint-disable no-param-reassign */
 export {};
 
+const animationNameList = ['zoomIn', 'fadeIn', 'backInDown'];
+const animationNumber = 0;
+
 const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
@@ -12,6 +15,11 @@ const modalFormInfoList = [
     title: 'на презентацию франшизы и финансовую модель',
     button: 'Получить презентацию',
   },
+  {
+    title: `Уже уходите? <br> 
+      Получите бесплатную презентацию на почту.`,
+    button: 'Получить презентацию',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -20,6 +28,7 @@ const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.pointerEvents = 'none';
   document.body.style.overflowY = 'auto';
   document.body.style.paddingRight = '0px';
+  modalEl.children[0].classList.remove(`animate__${animationNameList[animationNumber]}`);
 };
 
 const openModal = (modalEl: HTMLDivElement) => {
@@ -30,6 +39,7 @@ const openModal = (modalEl: HTMLDivElement) => {
   modalEl.style.overflowY = 'auto';
   modalEl.style.pointerEvents = 'auto';
   document.body.style.overflowY = 'hidden';
+  modalEl.children[0].classList.add(`animate__${animationNameList[animationNumber]}`);
 };
 
 const modalElList = document.querySelectorAll('.modal');
@@ -87,6 +97,18 @@ callbackBtnElList.forEach(btn => {
     formBtnEl.textContent = modalFormInfoList[0].button;
     openModal(formModalEl as HTMLDivElement);
   });
+});
+
+let isLeaveModalOpened = false;
+
+document.addEventListener('mouseleave', e => {
+  if (e.clientY < 10 && !isLeaveModalOpened) {
+    isLeaveModalOpened = true;
+    openedModalList.unshift(formModalEl);
+    formTitleEl.innerHTML = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
+    openModal(formModalEl as HTMLDivElement);
+  }
 });
 
 // Для каждого модального окна с видео прописать такой обработчик
